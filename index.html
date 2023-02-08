@@ -1,0 +1,450 @@
+<html>
+<head>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >  -->  
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+</head>
+<body>
+    <h1 class = "Main"> Hello! Welcome NLP</h1>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio 1</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 1A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 1B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button1'>
+        <button id="btn-A1" class="btn btn-dark" onclick="fnA('file-button1')">A</button>
+        <button id="btn-B1" class="btn btn-dark" onclick="fnB('file-button1')">B</button>
+    </div>
+    <h1 id = "txt_btn1"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio2</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 2A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 2B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button2'>
+        <button id="btn-A2" class="btn btn-dark" onclick="fnA('file-button2')">A</button>
+        <button id="btn-B2" class="btn btn-dark" onclick="fnB('file-button2')">B</button>
+    </div>
+    <h1 id = "txt_btn2"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio3</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 3A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 3B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button3'>
+        <button id="btn-A3" class="btn btn-dark" onclick="fnA('file-button3')">A</button>
+        <button id="btn-B3" class="btn btn-dark" onclick="fnB('file-button3')">B</button>
+    </div>
+    <h1 id = "txt_btn3"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio4</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 4A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 4B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button4'>
+        <button id="btn-A4" class="btn btn-dark" onclick="fnA('file-button4')">A</button>
+        <button id="btn-B4" class="btn btn-dark" onclick="fnB('file-button4')">B</button>
+    </div>
+    <h1 id = "txt_btn4"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio5</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 5A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 5B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button5'>
+        <button id="btn-A5" class="btn btn-dark" onclick="fnA('file-button5')">A</button>
+        <button id="btn-B5" class="btn btn-dark" onclick="fnB('file-button5')">B</button>
+    </div>
+    <h1 id = "txt_btn5"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio6</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 6A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 6B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button6'>
+        <button id="btn-A6" class="btn btn-dark" onclick="fnA('file-button6')">A</button>
+        <button id="btn-B6" class="btn btn-dark" onclick="fnB('file-button6')">B</button>
+    </div>
+    <h1 id = "txt_btn6"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio7</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 7A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 7B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button7'>
+        <button id="btn-A7" class="btn btn-dark" onclick="fnA('file-button7')">A</button>
+        <button id="btn-B7" class="btn btn-dark" onclick="fnB('file-button7')">B</button>
+    </div>
+    <h1 id = "txt_btn7"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio8</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 8A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 8B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button8'>
+        <button id="btn-A8" class="btn btn-dark" onclick="fnA('file-button8')">A</button>
+        <button id="btn-B8" class="btn btn-dark" onclick="fnB('file-button8')">B</button>
+    </div>
+    <h1 id = "txt_btn8"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio9</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 9A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 9B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = 'file-button9'>
+        <button id="btn-A9" class="btn btn-dark" onclick="fnA('file-button9')">A</button>
+        <button id="btn-B9" class="btn btn-dark" onclick="fnB('file-button9')">B</button>
+    </div>
+    <h1 id = "txt_btn9"></h1>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="file_container">
+        <div id="ref" class="fef-box">
+            <h1 id = "pred_t">Reference Audio10</h1>
+            <!-- <audio src="sample1.wav" type = "audio/wav"></audio> -->
+            <audio controls>
+                <source src="sample1.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id="ref" class="fef-box"></div>
+        <div id = "pred-A" class = "pred">
+            <h1 id = "pred_t">Sample 10A</h1>
+            <audio controls>
+                <source src="sample2.wav" type="audio/wav">
+            </audio>
+        </div>
+        <div id = "pred-B" class = "pred">
+            <h1 id = "pred_t">Sample 10B</h1><audio controls>
+                <source src="sample3.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
+    <div class="file_button" id = file-button10>
+        <button id="btn-A10" class="btn btn-dark" onclick="fnA('file-button10')">A</button>
+        <button id="btn-B10" class="btn btn-dark" onclick="fnB('file-button10')">B</button>
+    </div>
+    <h1 id = "txt_btn10"></h1>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRKU2md1GyLXuXbxMBR3PO3iAAMAbV9bJImVC2_aPCRHJ8S2nWsVyuqnyMWpyVmCpw/exec';
+        var pred_A1 = document.getElementById('btn-A1')
+        var pred_A2 = document.getElementById('btn-A2')
+        var pred_A3 = document.getElementById('btn-A3')
+        var pred_A4 = document.getElementById('btn-A4')
+        var pred_A5 = document.getElementById('btn-A5')
+        var pred_A6 = document.getElementById('btn-A6')
+        var pred_A7 = document.getElementById('btn-A7')
+        var pred_A8 = document.getElementById('btn-A8')
+        var pred_A9 = document.getElementById('btn-A9')
+        var pred_A10 = document.getElementById('btn-A10')
+
+        var pred_B1 = document.getElementById('btn-B1')
+        var pred_B2 = document.getElementById('btn-B2')
+        var pred_B3 = document.getElementById('btn-B3')
+        var pred_B4 = document.getElementById('btn-B4')
+        var pred_B5 = document.getElementById('btn-B5')
+        var pred_B6 = document.getElementById('btn-B6')
+        var pred_B7 = document.getElementById('btn-B7')
+        var pred_B8 = document.getElementById('btn-B8')
+        var pred_B9 = document.getElementById('btn-B9')
+        var pred_B10 = document.getElementById('btn-B10')
+
+        var div_btn = document.getElementById('file-button')
+
+        /*pred_A1.onclick('', e => {
+            div_btn.setAttribute.height = 0;
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: {'FileName': tbc, "Value": 'A'}})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            
+        })*/
+        function fnA(elementID) {
+            //div_btn.style.height = '0px';
+            if(elementID == 'file-button1'){
+                pred_A1.remove();
+                pred_B1.remove();
+            }
+            else if(elementID == 'file-button2'){
+                pred_A2.remove();
+                pred_B2.remove();
+            }
+            else if(elementID == 'file-button3'){
+                pred_A3.remove();
+                pred_B3.remove();
+            }
+            else if(elementID == 'file-button4'){
+                pred_A4.remove();
+                pred_B4.remove();
+            }
+            else if(elementID == 'file-button5'){
+                pred_A5.remove();
+                pred_B5.remove();
+            }
+            else if(elementID == 'file-button6'){
+                pred_A6.remove();
+                pred_B6.remove();
+            }
+            else if(elementID == 'file-button7'){
+                pred_A7.remove();
+                pred_B7.remove();
+            }
+            else if(elementID == 'file-button8'){
+                pred_A8.remove();
+                pred_B8.remove();
+            }
+            else if(elementID == 'file-button9'){
+                pred_A9.remove();
+                pred_B9.remove();
+            }
+            else if(elementID == 'file-button10'){
+                pred_A10.remove();
+                pred_B10.remove();
+            }
+            const formData = new FormData();
+            formData.append('filename', 'Chris');
+            formData.append('value', 'A');
+            fetch(scriptURL, { method: 'POST', body: formData})
+        }
+        function fnB(elementID) {
+            //div_btn.style.height = '0px';
+            if(elementID == 'file-button1'){
+                pred_A1.remove();
+                pred_B1.remove();
+            }
+            else if(elementID == 'file-button2'){
+                pred_A2.remove();
+                pred_B2.remove();
+            }
+            else if(elementID == 'file-button3'){
+                pred_A3.remove();
+                pred_B3.remove();
+            }
+            else if(elementID == 'file-button4'){
+                pred_A4.remove();
+                pred_B4.remove();
+            }
+            else if(elementID == 'file-button5'){
+                pred_A5.remove();
+                pred_B5.remove();
+            }
+            else if(elementID == 'file-button6'){
+                pred_A6.remove();
+                pred_B6.remove();
+            }
+            else if(elementID == 'file-button7'){
+                pred_A7.remove();
+                pred_B7.remove();
+            }
+            else if(elementID == 'file-button8'){
+                pred_A8.remove();
+                pred_B8.remove();
+            }
+            else if(elementID == 'file-button9'){
+                pred_A9.remove();
+                pred_B9.remove();
+            }
+            else if(elementID == 'file-button10'){
+                pred_A10.remove();
+                pred_B10.remove();
+            }
+            const formData = new FormData();
+            formData.append('filename', 'ttt');
+            formData.append('value', 'B');
+            fetch(scriptURL, { method: 'POST', body: formData})
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
