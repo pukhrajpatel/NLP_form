@@ -317,7 +317,9 @@
     <h1 id = "txt_btn10"></h1>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRKU2md1GyLXuXbxMBR3PO3iAAMAbV9bJImVC2_aPCRHJ8S2nWsVyuqnyMWpyVmCpw/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby6PDeIRKcgH1iQVnG-NYXsZ1IitYYrWXJuUUOIOsyjDqomds7tt_sgHaqtJMZoUIJo/exec';
+        //const scriptURL = 'https://script.google.com/macros/s/AKfycbzVrnqFOlyxgfRlUVVzQVtQGAVvfeS54wE8FDQKnBF626TDyc735zhA--I9JkhM0bj-/exec';
+        //const scriptURL = 'https://script.google.com/macros/s/AKfycbyRKU2md1GyLXuXbxMBR3PO3iAAMAbV9bJImVC2_aPCRHJ8S2nWsVyuqnyMWpyVmCpw/exec';
         var pred_A1 = document.getElementById('btn-A1')
         var pred_A2 = document.getElementById('btn-A2')
         var pred_A3 = document.getElementById('btn-A3')
@@ -392,10 +394,13 @@
                 pred_A10.remove();
                 pred_B10.remove();
             }
+            const XHR = new XMLHttpRequest();
             const formData = new FormData();
             formData.append('filename', 'Chris');
             formData.append('value', 'A');
-            fetch(scriptURL, { method: 'POST', body: formData})
+            XHR.open("POST", 'data.xlsx')
+            XHR.send(formData);
+            //fetch(scriptURL, { method: 'POST', body: formData})
         }
         function fnB(elementID) {
             //div_btn.style.height = '0px';
@@ -439,10 +444,14 @@
                 pred_A10.remove();
                 pred_B10.remove();
             }
+            const XHR = new XMLHttpRequest();
+
             const formData = new FormData();
             formData.append('filename', 'ttt');
             formData.append('value', 'B');
-            fetch(scriptURL, { method: 'POST', body: formData})
+            XHR.open("POST", 'data.xlsx')
+            XHR.send(formData);
+            //fetch(scriptURL, { method: 'POST', body: formData})
         }
     </script>
     <script src="script.js"></script>
